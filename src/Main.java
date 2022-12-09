@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
     }
 
     public static void task1() {
@@ -13,6 +14,19 @@ public class Main {
             totalNow += contribution;
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + totalNow + " рублей");
+        }
+    }
+
+    public static void task2() {
+        System.out.println("Задача 2");
+        int number = 0;
+        while (number < 10) {
+            number++;
+            System.out.print(number + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < number; number--) {
+            System.out.print(number + " ");
         }
     }
 
