@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -39,6 +40,21 @@ public class Main {
             int mortality = population / 1000 * 8;
             population += fertility - mortality;
             System.out.println("Год " + i + ", численность населения составляет " + population);
+        }
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+        int contribution = 15000;
+        int totalEnd = 12_000_000;
+        int totalNow = 0;
+        int percent = 0;
+        int month = 0;
+        while (totalNow <= totalEnd) {
+            totalNow += contribution + percent;
+            percent += totalNow * 7 / 100;
+            month++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalNow + " рублей");
         }
     }
 
