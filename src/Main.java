@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -66,6 +67,23 @@ public class Main {
         int percent = 0;
         int month = 0;
         while (totalNow <= totalEnd) {
+            totalNow += contribution + percent;
+            percent += totalNow * 7 / 100;
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + totalNow + " рублей");
+            }
+        }
+    }
+
+    public static void task6() {
+        System.out.println("Задача 6");
+        int depositTerm = 108;
+        int contribution = 15000;
+        long totalNow = 0L;
+        long percent = 0L;
+        int month = 0;
+        while (month <= depositTerm) {
             totalNow += contribution + percent;
             percent += totalNow * 7 / 100;
             month++;
